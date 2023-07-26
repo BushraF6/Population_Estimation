@@ -14,6 +14,6 @@ with open('population-estimates_csv.csv', 'r', encoding='utf-8') as popfile:
             years.append(int(population['Year']))
             population_count.append(float(population['Population']))
             plt.barh(population['Year'], float(population['Population']))
-plt.xlabel("Year")
-plt.ylabel('Population Count')
+plt.ylabel("Year")
+plt.xlabel('Population Count')
 plt.show()
