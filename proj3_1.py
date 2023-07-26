@@ -1,21 +1,19 @@
-""" importing the required modules to solve the problem. """
+"""Importing required modules to solve the problem."""
 import csv
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 
-#Creating lists to store the values.
-years=[]
-population_count=[]
-
-#Opening file for extracting data.
-with open('population-estimates_csv.csv','r') as populationfile:
-    population_reader=csv.DictReader(populationfile)
-    #Calculate population per year for country India and plot it.
+# Creating 2 lists to store the values of years and population_count.
+years = []
+population_count = []
+# Opening file to extract data.
+with open('population-estimates_csv.csv', 'r', encoding='utf-8') as popfile:
+    population_reader = csv.DictReader(popfile)
+    # Calculate population of India per year and plot it.
     for population in population_reader:
-        if population['Region']=='India': 
+        if population['Region'] == 'India':
             years.append(int(population['Year']))
             population_count.append(float(population['Population']))
-            plt.barh(population['Year'],float(population['Population']))
-
+            plt.barh(population['Year'], float(population['Population']))
 plt.xlabel("Year")
 plt.ylabel('Population Count')
 plt.show()
