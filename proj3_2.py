@@ -14,6 +14,6 @@ with open('population-estimates_csv.csv', 'r', encoding='utf-8') as popfile:
     for population in population_reader:
         if population['Year'] == '2014' and population['Region'] in asean:
             plt.barh(population['Region'], float(population['Population']))
-plt.xlabel('ASEAN Countries')
-plt.ylabel('Population Count')
+plt.ylabel('ASEAN Countries')
+plt.xlabel('Population Count')
 plt.show()
