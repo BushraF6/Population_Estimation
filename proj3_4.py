@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 
 # Creating list containing the names of ASEAN countries
 asean = ['Brunei Darussalam', 'Cambodia', 'Indonesia',
-         " Lao People's Democratic Republic",
+         "Lao People's Democratic Republic",
          'Malaysia', 'Myanmar', 'Philippines',
          'Singapore', 'Thailand', 'Viet Nam']
 # List containing years.
